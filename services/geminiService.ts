@@ -4,7 +4,7 @@ import { CURRENCY_RATES, getCurrencyCode } from '../utils/currency';
 import { translations } from '../utils/translations';
 
 // Initialize the Gemini API client
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const invoiceSchema = {
   type: Type.OBJECT,
